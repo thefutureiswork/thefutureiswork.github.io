@@ -58,7 +58,7 @@ cd inspiring-online
 
 The last thing you need to do before you can run locally is do a `bundle install` to install the required gems.
 
-Then just run `jekyll serve` to see the website running on `http://localhost:4000`.
+Then just run `jekyll serve` or `bundle exec jekyll serve` to see the website running on `http://localhost:4000`.
 
 If you get any errors or warnings, try running `bundle exec jekyll serve` instead.
 

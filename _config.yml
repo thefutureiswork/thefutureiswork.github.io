@@ -22,4 +22,4 @@ var_older: 'Next'
 var_newer: 'Previous'
 
 # External resources
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
