@@ -31,31 +31,20 @@ layout: compress
     {% endif %}
 
     <!-- CSS -->
-    <link href="{{ 'css/stylesheet.css' | relative_url }}" rel="stylesheet" type="text/css">
+    <link href="{{ 'css/styles.css' }}" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header>
       <div class="title-tile">
-        {% if page.image %}
-          <a href="{{ page.link }}?ref=inspiring-online">
-          {% if page.remoteImage %}
-            <img src="{{ site.remoteAssetUrl }}assets/post-images/{{ page.image }}" alt="{{ page.title }}"/>
-          {% else %}
-            <img src="{{ '/' | relative_url }}assets/post-images/{{ page.image }}" alt="{{ page.title }}"/>
-          {% endif %}
-          </a>
-        {% endif %}
-
         <h1>
           <a href="{{ page.link }}?ref=inspiring-online">{{ page.title }}</a>
         </h1>
-
         {{ content }}
       </div>
     </header>
 
-    <div class="content-wrapper">
+    <div class="wrapper">
 
       <div class="loader">
         <div class="loader-bar"></div>
@@ -64,6 +53,5 @@ layout: compress
 
     <!-- JS -->
     {% include analytics.html %}
-    <!-- <script type="text/javascript" src="{{ 'js/inspiring-online.js' | relative_url }}"></script> -->
   </body>
 </html>

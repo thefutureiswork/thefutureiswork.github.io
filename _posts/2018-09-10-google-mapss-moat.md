@@ -14,5 +14,4 @@ imgHeight: 551
 
 _How far ahead of Apple Maps is Google Maps?_
 
-
 [Google Maps's Moat](https://www.justinobeirne.com/google-maps-moat) - by [Justin O’Beirne](https://www.justinobeirne.com)

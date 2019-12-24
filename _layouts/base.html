@@ -9,26 +9,25 @@ layout: compress
 
 		<!-- META -->
 		<meta charset="utf-8">
-		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | relative_url }}
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' }}
 		<link rel="icon" type="image/png" href="{{ 'assets/favicon.png' | relative_url }}">
 		<link rel="mask-icon" href="safari-tab-icon.svg" color="#000000">
 		<meta name="description" content="An open source blog for inspiring and creative online work!">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- USED STUFF -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Squada+One&display=swap" rel="stylesheet">
+
 		<!-- CSS -->
-		<link href="{{ 'css/stylesheet.css' | relative_url }}" rel="stylesheet" type="text/css">
+		<link href="{{ 'css/styles.css' | relative_url }}" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
-		<div class="content-wrapper">
+		<div class="wrapper">
 			{{content}}
-			<div class="loader">
-				<div class="loader-bar"></div>
-			</div>
 		</div>
 
 		<!-- JS -->
 		{% include analytics.html %}
-		<script type="text/javascript" src="{{ 'js/inspiring-online.js' | relative_url }}"></script>
 	</body>
 </html>
