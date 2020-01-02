@@ -22,14 +22,6 @@ layout: compress
     <meta name="twitter:url" content="{{ page.url }}">
     <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
 
-    {% if page.image %}
-        {% if page.remoteImage %}
-            <meta name="twitter:image:src" content="{{ site.remoteAssetUrl }}assets/post-images/{{ page.image }}">
-        {% else %}
-            <meta name="twitter:image:src" content="http://inspiring.online/{{ site.baseurl }}assets/post-images/{{ page.image }}">
-        {% endif %}
-    {% endif %}
-
     <!-- CSS -->
     <link href="{{ 'css/styles.css' }}" rel="stylesheet" type="text/css">
   </head>
