@@ -5,3 +5,19 @@ layout: base
 {% for post in paginator.posts %}
   {% include tiles/post.html %}
 {% endfor %}
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">
+      previous
+    </a>
+  {% else %}
+    <span></span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">next</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+</div>

@@ -10,13 +10,13 @@
 }
 
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0px;
   margin: 0px;
 }
 
 h1, h2 {
-  font-family: 'Squada One', cursive;
+  font-family: 'Playfair Display', serif;
   padding: 0px;
   margin: 0px;
 }
@@ -25,22 +25,57 @@ h1, h2 {
  *  Inspiring Online
  */
 
+header {
+  position: fixed;
+  width: 100%;
+  background: #f9f9f9;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 24px;
+  letter-spacing: 0px;
+  top: 0;
+  justify-content: space-between;
+}
+
+header a {
+  color: #333;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+
+
 .wrapper {
-  padding: 50px 20px;
+  margin-top: 70px;
+  padding: 0 15px;
 }
 
 article {
   max-width: 600px;
   margin: auto;
-  padding: 50px;
+  padding: 40px 15px;
   border-bottom: 2px dashed #ddd;
 }
 
 article h1 {
-  font-size: 4rem;
-  color: rgba(0, 0, 0, 0.9);
-  line-height: 3.2rem;
-  text-indent: -30px;
+  font-size: 3rem;
+  line-height: 2.7rem;
+  text-indent: -15px;
   padding-bottom: 20px;
-  width: calc(100% + 30px);
+  width: calc(100% + 15px);
+  color: #333;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.pagination a {
+  color: #333;
 }

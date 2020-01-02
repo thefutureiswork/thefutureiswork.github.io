@@ -12,16 +12,23 @@ layout: compress
 		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' }}
 		<link rel="icon" type="image/png" href="{{ 'assets/favicon.png' | relative_url }}">
 		<link rel="mask-icon" href="safari-tab-icon.svg" color="#000000">
-		<meta name="description" content="An open source blog for inspiring and creative online work!">
+		<meta name="description" content="A simple blog for inspiring and creative online (and occasionally offline) work.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- USED STUFF -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Squada+One&display=swap" rel="stylesheet">
+		<!-- OTHER -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap" rel="stylesheet">
 
 		<!-- CSS -->
 		<link href="{{ 'css/styles.css' | relative_url }}" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+
+		<header>
+			<div class="logo" alt="Inspiring Online"><a href="/">i.o.</a></div>
+			<div class="links">
+				<a href="/feed.xml">rss</a>
+			</div>
+		</header>
 
 		<div class="wrapper">
 			{{content}}
