@@ -36,9 +36,7 @@ h1, h2 {
   max-width: 250px;
   padding: 15px;
   margin: 15px;
-
-  box-shadow: 9px 9px black;
-  border: 3px solid #000;
+  box-shadow: 0 9px 36px rgba(0,0,0,0.17) !important;
   margin-bottom: 30px;
   transition-property: all !important;
 
@@ -47,6 +45,13 @@ h1, h2 {
     pointer-events: none;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+  }
+
+  &:empty {
+    width: 1px;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
   }
 }
 
@@ -85,17 +90,17 @@ h2 {
   font-size: 14px;
 }
 
-a {
-  color: #333;
+// a {
+//   color: #333;
 
-  &:visited {
-    color: #888;
+//   &:visited {
+//     color: #888;
       
-    h1 {
-      color: #888;  
-    }
-  }
-}
+//     h1 {
+//       color: #888;  
+//     }
+//   }
+// }
 
 ul {
   padding-left: 0px;

@@ -104,16 +104,16 @@ function createIsotopeContainer() {
 
 function renderInitialTile() {
   var element = document.createElement('div');
-  element.innerHTML = `
-    <h1>Inspiring Online</h1>
-    <h2>A micro blog of what&#700;s up online, today.</h2>
-    <ul>
-      <li><a href="https://github.com/tholman/inspiring-online/graphs/contributors">Contributors</a></li>
-      <li><a href="https://github.com/tholman/inspiring-online#contributing">Join in?</a></li>
-      <li><a href="https://twitter.com/NspiringOnline">Twitter</a></li>
-      <li><a href="https://github.com/tholman/inspiring-online#inspiring-online">About</a></li>
-      <li><a href="/feed.xml">RSS</a></li>
-    </ul>`
+  // element.innerHTML = `
+  //   <h1>Inspiring Online</h1>
+  //   <h2>A micro blog of what&#700;s up online, today.</h2>
+  //   <ul>
+  //     <li><a href="https://github.com/tholman/inspiring-online/graphs/contributors">Contributors</a></li>
+  //     <li><a href="https://github.com/tholman/inspiring-online#contributing">Join in?</a></li>
+  //     <li><a href="https://twitter.com/NspiringOnline">Twitter</a></li>
+  //     <li><a href="https://github.com/tholman/inspiring-online#inspiring-online">About</a></li>
+  //     <li><a href="/feed.xml">RSS</a></li>
+  //   </ul>`
 
   element.className = "tile"
   isotopeObject.insert(element);
@@ -125,7 +125,7 @@ function renderFooterTile() {
     <footer>
       Wow, you got to the end! Got something to share, you should <a href="https://github.com/tholman/inspiring-online#contributing">consider contributing!</a>
     </footer>`
-  document.body.appendChild(element);
+  document.querySelector('.content').appendChild(element);
 }
 
 function renderPosts(postsData) {
@@ -142,8 +142,7 @@ function renderPost(postData) {
     if( postData.image !== "" ) {
 
       var anchor = document.createElement('a');
-      anchor.href = postData.link + '?ref=inspiring-online';
-      anchor.target = "_blank"
+      anchor.href = postData.link;
 
       var img = document.createElement('img');
 
@@ -169,8 +168,7 @@ function renderPost(postData) {
     }
 
     var anchor2 = document.createElement('a');
-    anchor2.href = postData.link + '?ref=inspiring-online';
-    anchor2.target = "_blank"
+    anchor2.href = postData.link;
     anchor2.className = "title-anchor";
 
     var title = document.createElement('h1');

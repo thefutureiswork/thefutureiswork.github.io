@@ -1,12 +1,11 @@
 permalink:  /:title/
-
 url: 'http://inspiring.online'
-baseurl: ''
 remoteAssetUrl: https://s3.amazonaws.com/inspiring.online/
 
 # Title tag variables
-title: Inspiring Online
-tagline: 'An open source blog for inspiring and creative online work!'
+title: The Future is Work
+description: |
+  An [open source](/) blog for inspiring and creative online work!
 
 # Other external links
 analytics_tracking_id: "UA-83557691-1"
@@ -22,4 +21,16 @@ var_older: 'Next'
 var_newer: 'Previous'
 
 # External resources
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+exclude:
+  - hyde
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:title/
