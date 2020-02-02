@@ -46,6 +46,13 @@ h1, h2 {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
   }
+
+  &:empty {
+    width: 1px;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
 }
 
 header {

@@ -104,16 +104,16 @@ function createIsotopeContainer() {
 
 function renderInitialTile() {
   var element = document.createElement('div');
-  element.innerHTML = `
-    <h1>Inspiring Online</h1>
-    <h2>A micro blog of what&#700;s up online, today.</h2>
-    <ul>
-      <li><a href="https://github.com/tholman/inspiring-online/graphs/contributors">Contributors</a></li>
-      <li><a href="https://github.com/tholman/inspiring-online#contributing">Join in?</a></li>
-      <li><a href="https://twitter.com/NspiringOnline">Twitter</a></li>
-      <li><a href="https://github.com/tholman/inspiring-online#inspiring-online">About</a></li>
-      <li><a href="/feed.xml">RSS</a></li>
-    </ul>`
+  // element.innerHTML = `
+  //   <h1>Inspiring Online</h1>
+  //   <h2>A micro blog of what&#700;s up online, today.</h2>
+  //   <ul>
+  //     <li><a href="https://github.com/tholman/inspiring-online/graphs/contributors">Contributors</a></li>
+  //     <li><a href="https://github.com/tholman/inspiring-online#contributing">Join in?</a></li>
+  //     <li><a href="https://twitter.com/NspiringOnline">Twitter</a></li>
+  //     <li><a href="https://github.com/tholman/inspiring-online#inspiring-online">About</a></li>
+  //     <li><a href="/feed.xml">RSS</a></li>
+  //   </ul>`
 
   element.className = "tile"
   isotopeObject.insert(element);
