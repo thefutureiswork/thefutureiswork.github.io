@@ -125,7 +125,7 @@ function renderFooterTile() {
     <footer>
       Wow, you got to the end! Got something to share, you should <a href="https://github.com/tholman/inspiring-online#contributing">consider contributing!</a>
     </footer>`
-  document.body.appendChild(element);
+  document.querySelector('.content').appendChild(element);
 }
 
 function renderPosts(postsData) {
