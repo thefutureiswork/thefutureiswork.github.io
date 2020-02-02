@@ -1,7 +1,5 @@
 permalink:  /:title/
-
 url: 'http://inspiring.online'
-baseurl: ''
 remoteAssetUrl: https://s3.amazonaws.com/inspiring.online/
 
 # Title tag variables
@@ -22,4 +20,16 @@ var_older: 'Next'
 var_newer: 'Previous'
 
 # External resources
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+exclude:
+  - hyde
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:title/
