@@ -24,22 +24,18 @@ h1, h2 {
  *  Inspiring Online
  */
 
-.content-wrapper {
-  padding: 30px;
-}
-
-.tile-grid {
-  margin: 0 auto;
-}
-
 .tile {
-  max-width: 250px;
+  @media screen and (min-width: 667px) {
+    max-width: 15rem;
+  }
   padding: 15px;
-  margin: 15px;
+  margin: 2rem 1rem;
   box-shadow: 0 9px 36px rgba(0,0,0,0.17) !important;
   margin-bottom: 30px;
   transition-property: all !important;
-
+  &-grid {
+    margin: 0 auto;
+  }
   &.site-down {
     opacity: 0.2 !important; // override the into animation
     pointer-events: none;
@@ -68,7 +64,6 @@ header {
 }
 
 .title-tile {
-  max-width: 250px;
   padding: 15px;
   border: 5px solid #fff;
   box-shadow: 9px 9px #fff;

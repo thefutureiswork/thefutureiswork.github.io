@@ -90,14 +90,12 @@ function createIsotopeContainer() {
     },
     sortBy: 'original-order',
     hiddenStyle: {
-      transform: 'translate(9px, 9px)',
-      'opacity': 0,
-      'box-shadow': '0px 0px black'
+      // transform: 'translate(9px, 9px)',
+      'opacity': 0
     },
     visibleStyle: {
-      transform: 'translate(0px, 0px)',
-      opacity: 1,
-      'box-shadow': '9px 9px black'
+      // transform: 'translate(0px, 0px)',
+      opacity: 1
     }
   });
 }
