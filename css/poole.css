@@ -33,6 +33,9 @@ a {
   color: #268bd2;
   text-decoration: none;
 }
+a h1 {
+  color: #268bd2;
+}
 a strong {
   color: inherit;
 }
