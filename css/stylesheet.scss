@@ -31,11 +31,11 @@ h1, h2 {
 .tile {
   @media screen and (min-width: 667px) {
     max-width: 15rem;
+    margin: 2rem 1rem;
   }
   padding: 15px;
-  margin: 2rem 1rem;
   box-shadow: 0 9px 36px rgba(0,0,0,0.17) !important;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
   transition-property: all !important;
   &-grid {
     margin: 0 auto;
@@ -52,6 +52,9 @@ h1, h2 {
     margin: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
+  }
+  &-external {
+    background-color: $shade;
   }
 }
 
@@ -191,8 +194,3 @@ footer {
   }
 }
 
-.tile {
-  &-external {
-    background-color: $shade;
-  }
-}
