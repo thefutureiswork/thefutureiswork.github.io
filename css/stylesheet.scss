@@ -147,3 +147,42 @@ footer {
   margin-top: 70px;
   margin-bottom: 45px;
 }
+
+.sidebar {
+  &-toggle {
+    margin: 0;
+    display: none;
+  }
+}
+@media (min-width: 48em) {
+  .sidebar {
+    &-pull {
+      transform: translateX(-20rem)
+    }
+    &-toggle {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 99999;
+      background-image: url(/assets/bar.svg);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      margin-bottom: 1rem;
+      &::before {
+        content: "MENU";
+        position: absolute;
+        left: 1.75rem;
+        top: 0;
+        font-size: 1.33rem;
+        margin-top: 0.25rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .content.sidebar-pull {
+    transform: translateX(-10rem);
+  }
+}
