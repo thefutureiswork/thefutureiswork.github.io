@@ -1,4 +1,8 @@
-<div class="sidebar">
+{%- if page.layout == 'post' -%}
+<div class="sidebar sidebar-pull">
+{%- else %}
+  <div class="sidebar">
+{%- endif %}
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
