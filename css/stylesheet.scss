@@ -5,6 +5,10 @@
  *  Inspiring Online
  */
 
+//  .TNO-5G-Network-1-hex { color: #011640; } .TNO-5G-Network-2-hex { color: #0B438C; } .TNO-5G-Network-3-hex { color: #48CAD9; } .TNO-5G-Network-4-hex { color: #71D99E; } 
+ 
+$shade: #F2DFBB;
+
 * {
   box-sizing: border-box;
 }
@@ -184,5 +188,11 @@ footer {
   }
   .content.sidebar-pull {
     transform: translateX(-10rem);
+  }
+}
+
+.tile {
+  &-external {
+    background-color: $shade;
   }
 }

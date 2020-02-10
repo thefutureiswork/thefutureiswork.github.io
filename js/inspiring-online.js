@@ -4,6 +4,71 @@
  * -- And endless scroll
  */
 
+
+function isObj(obj) {
+  return (obj && typeof obj === 'object' && obj !== null) ? true : false;
+}
+
+function createEl(element = 'div') {
+  return document.createElement(element);
+}
+
+function emptyEl(el) {
+  while(el.firstChild)
+  el.removeChild(el.firstChild);
+}
+
+function elem(selector, parent = document){
+  let elem = isObj(parent) ? parent.querySelector(selector) : false;
+  return elem ? elem : false;
+}
+
+function elems(selector, parent = document) {
+  let elems = isObj(parent) ?parent.querySelectorAll(selector) : [];
+  return elems.length ? elems : false;
+}
+
+function pushClass(el, targetClass) {
+  if (isObj(el) && targetClass) {
+    let elClass = el.classList;
+    elClass.contains(targetClass) ? false : elClass.add(targetClass);
+  }
+}
+
+function deleteClass(el, targetClass) {
+  if (isObj(el) && targetClass) {
+    let elClass = el.classList;
+    elClass.contains(targetClass) ? elClass.remove(targetClass) : false;
+  }
+}
+
+function modifyClass(el, targetClass) {
+  if (isObj(el) && targetClass) {
+    const elClass = el.classList;
+    elClass.contains(targetClass) ? elClass.remove(targetClass) : elClass.add(targetClass);
+  }
+}
+
+function containsClass(el, targetClass) {
+  if (isObj(el) && targetClass && el !== document ) {
+    return el.classList.contains(targetClass) ? true : false;
+  }
+}
+
+function isChild(node, parentClass) {
+  let objectsAreValid = isObj(node) && parentClass && typeof parentClass == 'string';
+  return (objectsAreValid && node.closest(parentClass)) ? true : false;
+}
+
+function elemAttribute(elem, attr, value = null) {
+  if (value) {
+    elem.setAttribute(attr, value);
+  } else {
+    value = elem.getAttribute(attr);
+    return value ? value : false;
+  }
+}
+
 var remoteAssetSource = "https://s3.amazonaws.com/inspiring.online/assets/post-images/";
 var localAssetSource = "/assets/post-images/";
 var splitString = "splitHERE"; // Surely there is a better way to get json data in jekyll?
@@ -138,11 +203,14 @@ function renderPost(postData) {
   if (postData.title.replace(/\s+/g, '-').replace(/[^a-z0-9+][^\w.-]/gi, '').toLowerCase() != window.location.pathname.replace(/\//g, '').toLowerCase()) {
     var element = document.createElement('div');
     element.className = 'tile';
+    postData.externalLink ? pushClass(element, 'tile-external') : false;
 
     if( postData.image !== "" ) {
 
       var anchor = document.createElement('a');
-      anchor.href = postData.link;
+      anchor.href = postData.externalLink ? postData.externalLink : postData.link;
+
+      postData.externalLink ? anchor.target = '_blank' : false;
 
       var img = document.createElement('img');
 
@@ -168,7 +236,10 @@ function renderPost(postData) {
     }
 
     var anchor2 = document.createElement('a');
-    anchor2.href = postData.link;
+
+    anchor2.href = postData.externalLink ? postData.externalLink : postData.link;
+
+    postData.externalLink ? anchor2.target = '_blank' : false;
     anchor2.className = "title-anchor";
 
     var title = document.createElement('h1');
@@ -189,70 +260,6 @@ function renderPost(postData) {
 }
 
 tileGrid? init() : false;
-
-function isObj(obj) {
-  return (obj && typeof obj === 'object' && obj !== null) ? true : false;
-}
-
-function createEl(element = 'div') {
-  return document.createElement(element);
-}
-
-function emptyEl(el) {
-  while(el.firstChild)
-  el.removeChild(el.firstChild);
-}
-
-function elem(selector, parent = document){
-  let elem = isObj(parent) ? parent.querySelector(selector) : false;
-  return elem ? elem : false;
-}
-
-function elems(selector, parent = document) {
-  let elems = isObj(parent) ?parent.querySelectorAll(selector) : [];
-  return elems.length ? elems : false;
-}
-
-function pushClass(el, targetClass) {
-  if (isObj(el) && targetClass) {
-    let elClass = el.classList;
-    elClass.contains(targetClass) ? false : elClass.add(targetClass);
-  }
-}
-
-function deleteClass(el, targetClass) {
-  if (isObj(el) && targetClass) {
-    let elClass = el.classList;
-    elClass.contains(targetClass) ? elClass.remove(targetClass) : false;
-  }
-}
-
-function modifyClass(el, targetClass) {
-  if (isObj(el) && targetClass) {
-    const elClass = el.classList;
-    elClass.contains(targetClass) ? elClass.remove(targetClass) : elClass.add(targetClass);
-  }
-}
-
-function containsClass(el, targetClass) {
-  if (isObj(el) && targetClass && el !== document ) {
-    return el.classList.contains(targetClass) ? true : false;
-  }
-}
-
-function isChild(node, parentClass) {
-  let objectsAreValid = isObj(node) && parentClass && typeof parentClass == 'string';
-  return (objectsAreValid && node.closest(parentClass)) ? true : false;
-}
-
-function elemAttribute(elem, attr, value = null) {
-  if (value) {
-    elem.setAttribute(attr, value);
-  } else {
-    value = elem.getAttribute(attr);
-    return value ? value : false;
-  }
-}
 
 function customHelpers() {
   const sidebar = elem('.sidebar');
