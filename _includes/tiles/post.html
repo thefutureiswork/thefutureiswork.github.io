@@ -3,6 +3,7 @@
   "title": "{{ post.title }}",
   "content": `{{ post.content | strip_html | truncate: 160 }}`,
   "link": "{{ post.url }}",
+  "externalLink": "{{ post.link }}",
   "remoteAsset": "{{ post.remoteImage }}",
   "image": "{{ post.image }}",
   "imgWidth": "{{ post.imgWidth }}",

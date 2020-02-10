@@ -5,6 +5,10 @@
  *  The Future Is Work
  */
 
+//  .TNO-5G-Network-1-hex { color: #011640; } .TNO-5G-Network-2-hex { color: #0B438C; } .TNO-5G-Network-3-hex { color: #48CAD9; } .TNO-5G-Network-4-hex { color: #71D99E; } 
+ 
+$shade: #F2DFBB;
+
 * {
   box-sizing: border-box;
 }
@@ -24,22 +28,18 @@ h1, h2 {
  *  Inspiring Online
  */
 
-.content-wrapper {
-  padding: 30px;
-}
-
-.tile-grid {
-  margin: 0 auto;
-}
-
 .tile {
-  max-width: 250px;
+  @media screen and (min-width: 667px) {
+    max-width: 15rem;
+    margin: 2rem 1rem;
+  }
   padding: 15px;
-  margin: 15px;
   box-shadow: 0 9px 36px rgba(0,0,0,0.17) !important;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
   transition-property: all !important;
-
+  &-grid {
+    margin: 0 auto;
+  }
   &.site-down {
     opacity: 0.2 !important; // override the into animation
     pointer-events: none;
@@ -52,6 +52,9 @@ h1, h2 {
     margin: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
+  }
+  &-external {
+    background-color: $shade;
   }
 }
 
@@ -68,7 +71,6 @@ header {
 }
 
 .title-tile {
-  max-width: 250px;
   padding: 15px;
   border: 5px solid #fff;
   box-shadow: 9px 9px #fff;
@@ -152,3 +154,43 @@ footer {
   margin-top: 70px;
   margin-bottom: 45px;
 }
+
+.sidebar {
+  &-toggle {
+    margin: 0;
+    display: none;
+  }
+}
+@media (min-width: 48em) {
+  .sidebar {
+    &-pull {
+      transform: translateX(-20rem)
+    }
+    &-toggle {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 99999;
+      background-image: url(/assets/bar.svg);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      margin-bottom: 1rem;
+      &::before {
+        content: "MENU";
+        position: absolute;
+        left: 1.75rem;
+        top: 0;
+        font-size: 1.33rem;
+        margin-top: 0.25rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .content.sidebar-pull {
+    transform: translateX(-10rem);
+  }
+}
+
