@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Really From
-date: 2018-10-25 11:26:14
-type: Inspiration
+title: Cisco's Cognitive Collaboration
+date: 2020-02-08 11:26:14
+type: Content
 image: really-from.png
-link: https://reallyfrom.com
-authorName: Tim Scalzo
+link: https://s3.amazonaws.com/thefutureiswork.com/assets/cisco-cognitive-collaboration.pdf
+authorName: Cisco
 authorUrl: 
-authorGithub: TJScalzo
+authorGithub: 
 imgWidth: 576
 imgHeight: 660
-# siteDown: true
 ---
 
-_A showcase of generative art pieces paired with stories of personal history and origin._
+_Cisco's view of how AI can help create new collaborative environments_
 
 
 
-[Really From](https://reallyfrom.com) - by [Sean Catangui](https://catangui.com)
+[Cisco: Cognitive Collaboration](https://s3.amazonaws.com/thefutureiswork.com/assets/cisco-cognitive-collaboration.pdf) - by [Cisco](https://cisco.com)

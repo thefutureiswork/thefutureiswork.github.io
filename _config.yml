@@ -1,14 +1,14 @@
 permalink:  /:title/
-url: 'http://inspiring.online'
-remoteAssetUrl: https://s3.amazonaws.com/inspiring.online/
+url: 'https://thefutureiswork.com'
+remoteAssetUrl: https://s3.amazonaws.com/thefutureiswork.com/
 
 # Title tag variables
 title: The Future is Work
 description: |
-  An [open source](/) blog for inspiring and creative online work!
+  An [open source](/) journal and compendium about working in the digital era!
 
 # Other external links
-analytics_tracking_id: "UA-83557691-1"
+analytics_tracking_id: "UA-86377416-3"
 
 # Misc variables
 highlighter: 'rouge'
