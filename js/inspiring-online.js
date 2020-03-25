@@ -188,7 +188,7 @@ function renderFooterTile() {
   var element = document.createElement('footer');
   element.innerHTML = `
     <footer>
-      Wow, you got to the end! Got something to share, you should <a href="https://github.com/tholman/inspiring-online#contributing">consider contributing!</a>
+      The End! Nice work :-). Want more? Consider <a href="https://thefutureiswork.substack.com">subscribing!</a>
     </footer>`
   document.querySelector('.content').appendChild(element);
 }
