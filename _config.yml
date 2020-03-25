@@ -5,7 +5,7 @@ remoteAssetUrl: https://s3.amazonaws.com/thefutureiswork.com/
 # Title tag variables
 title: The Future is Work
 description: |
-  An [open source](/) journal and compendium about working in the digital era!
+  A compendium about working in the digital era, and what it means for society
 
 # Other external links
 analytics_tracking_id: "UA-86377416-3"
@@ -23,6 +23,8 @@ var_newer: 'Previous'
 # External resources
 plugins: 
   - jekyll-paginate
+  - jekyll-sass-converter
+
 exclude:
   - hyde
 
